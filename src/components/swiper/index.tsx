@@ -53,17 +53,15 @@ const Swiper = ({
             onSwiper={(swiper) => console.log(swiper)}
         >
             {data.map((item : MyPortfolio) => {
-                return <SwiperSlide>
+                return <SwiperSlide key={item.id}>
                     <Image 
-                        key={item.id}
                         width={500}
                         height={500}  
                         src={item.img}
                         alt={item.name} 
                         className="w-full rounded-lg object-cover" />
                 </SwiperSlide>
-            })}
-                
+            })}       
         </SwiperComponent>
     )
 }

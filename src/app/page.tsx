@@ -12,7 +12,7 @@ export default function Home() {
   const title = 'Model and Software Engineer'
 
     return (
-      <div className="mx-auto">
+      <main className="mx-auto">
         <Banner 
           alt={`${modelName}`}
           src={'/images/personal/ibra4.jpg'}
@@ -36,6 +36,6 @@ export default function Home() {
           />
         </ParallaxComp>
         <Footer />
-    </div>
+    </main>
   );
 }
