@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { Gallery } from "@/components/gallery";
 import { MyPortfolio } from "@/components/my-portfolio";
 import { MyStory } from "@/components/my-story";
@@ -18,9 +19,10 @@ export default function Home() {
           quality={100}
         />
       </ParallaxComp>
-      <MyPortfolio />
       <MyStory />
+      <MyPortfolio />
       <Gallery />
+      <Footer />
    </div>
   );
 }

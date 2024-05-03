@@ -7,7 +7,7 @@ export const MyStory = () => {
 
     return (
         <section>
-            <div className="grid grid-cols-2 my-14">
+            <div className="grid grid-cols-2 my-14 bg-gray-50 p-14">
                 <div>
                     <h1 
                         ref={headingRef}

@@ -6,7 +6,7 @@ import useVisibility from "@/hooks/useVisibility";
 export const MyPortfolio = () => {
     const { isVisible, headingRef } = useVisibility();
     return (
-    <div className='p-8 bg-gray-50 my-4 ' id='portfolio'>
+    <div className='p-8 my-4' id='portfolio'>
         <div className='text-center my-8 mt-14'>
         <h1 
             ref={headingRef}

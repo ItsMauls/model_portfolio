@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const useScroll = () => {
     const [isVisible, setIsVisible] = useState(false)
-    console.log(isVisible)
+
     const handleScroll = () => {
         const scrollPosition = window.scrollY
         if(scrollPosition > 100) setIsVisible(true)

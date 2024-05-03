@@ -9,6 +9,7 @@ const useVisibility = () => {
             return;
         }
         const rect = headingRef?.current?.getBoundingClientRect()
+        console.log(rect.top, rect.bottom, 'top bottom', window.innerHeight)
         setIsVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
     };
 
