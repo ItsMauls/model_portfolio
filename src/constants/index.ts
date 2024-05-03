@@ -58,10 +58,10 @@ export const myGallery : MyGallery[]= [
     {img: '/images/personal/ibra1.jpg' , name: 'gambar', id : 1},
     {img: '/images/personal/ibra2.jpg' , name: 'gambar', id : 2},
     {img: '/images/personal/ibra3.jpg' , name: 'gambar', id : 3},
-    {img: '/images/personal/ibra1.jpg' , name: 'gambar', id : 5},
-    {img: '/images/personal/ibra4.jpg' , name: 'gambar', id : 4},
-    {img: '/images/personal/ibra2.jpg' , name: 'gambar', id : 4},
-    {img: '/images/personal/ibra3.jpg' , name: 'gambar', id : 4},
+    {img: '/images/personal/ibra1.jpg' , name: 'gambar', id : 4},
+    {img: '/images/personal/ibra4.jpg' , name: 'gambar', id : 5},
+    {img: '/images/personal/ibra2.jpg' , name: 'gambar', id : 6},
+    {img: '/images/personal/ibra3.jpg' , name: 'gambar', id : 7},
 ]
 
 
