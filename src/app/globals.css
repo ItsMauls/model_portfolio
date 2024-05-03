@@ -102,6 +102,7 @@ h1 {
 /* Parallax responsive adjustments */
 @media (max-width: 768px) {
   .parallax {
-      background-attachment: scroll; /* Disable fixed attachment on small devices for better performance and compatibility */
+      background-attachment: scroll;
+      min-height: 500px /* Disable fixed attachment on small devices for better performance and compatibility */
   }
 }

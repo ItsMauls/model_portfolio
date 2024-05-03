@@ -6,7 +6,7 @@ export const NavItems = () => {
         <div>
             <ul className="flex flex-row">
                 {navLists.map((val, idx) => {
-                    return <li className="block px-4 py-2 font-medium" key={idx}>
+                    return <li className="block text-xl px-4 py-2 font-medium" key={idx}>
                                 <Link href={`#${val.link}`}>{val.name}</Link>
                             </li>
                 })}

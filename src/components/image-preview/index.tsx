@@ -1,6 +1,7 @@
 'use client'
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import { useParallax } from "react-scroll-parallax"
 
 interface ImagePrev {
     alt : string
