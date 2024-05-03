@@ -14,7 +14,7 @@ export const NavBar = () => {
                 <h1 className={`font-medium text-3xl pl-1 font-serif`}>
                     {modelName}
                 </h1>
-                <button className="text-4xl md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                <button className="text-3xl md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? '✖' : '☰'}
                 </button>
                 <div className={`${isOpen ? 'block' : 'hidden'} md:block`}>
