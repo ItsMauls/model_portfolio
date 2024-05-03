@@ -10,11 +10,12 @@ import { modelName } from "@/constants";
 
 export default function Home() {
   const title = 'Model and Software Engineer'
+
     return (
       <div className="mx-auto">
         <Banner 
           alt={`${modelName}`}
-          src={'/images/poto1.jpeg'}
+          src={'/images/personal/ibra4.jpg'}
           className="w-full md:w-2/3 md:mx-auto"
           width={300}
           height={300}
@@ -28,7 +29,7 @@ export default function Home() {
           <ImagePreview
             className="z-50"
             alt={modelName}
-            src={'https://www.firstforwomen.com/wp-content/uploads/sites/2/2024/01/Ryan-Gosling.jpg?w=953'}
+            src={'/images/personal/ibra5.jpg'}
             layout="fill"
             objectFit="cover"
             quality={100}

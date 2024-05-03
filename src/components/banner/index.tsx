@@ -18,6 +18,7 @@ interface Banner {
 export const Banner = ({ className, title, ...props } : Banner) => {
     const firstName = modelName.split(' ')[0];
     const lastName = modelName.split(' ')[1];
+    
     return (
         <div className="relative w-full h-500px">
             <Image
