@@ -16,7 +16,7 @@ export interface MyGallery {
 }
 
 
-export const modelName = process.env.NEXT_PUBLIC_MODEL_NAME as string
+export const modelName = process.env.NEXT_PUBLIC_MODEL_NAME || 'Maulana Ibrahim' as string
 
 export const navLists : NavLists[] = [{
     name : 'Home',
