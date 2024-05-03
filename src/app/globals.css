@@ -56,3 +56,52 @@ body {
 :root {
   --swiper-navigation-color: #000; 
 }
+
+/* Tailwind CSS utility classes for responsive design */
+footer {
+  @apply w-full md:w-4/5 lg:w-3/5 mx-auto;
+}
+
+.bg-gray-100 {
+  @apply rounded-sm p-4 md:p-14 my-4;
+}
+
+.text-6xl {
+  @apply text-3xl md:text-5xl;
+}
+
+.input, .textarea {
+  @apply py-1 px-2 w-full my-2;
+}
+
+/* This can be in your main CSS file if you're using PostCSS with Tailwind */
+
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .grid {
+      grid-template-columns: 1fr;  /* Stacks the columns on smaller screens */
+  }
+  .px-32 {
+      padding-left: 1rem; /* Reduce padding on smaller screens */
+      padding-right: 1rem;
+  }
+}
+
+/* Text scaling */
+h1 {
+  font-size: 2.5rem; /* Default size */
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.5rem; /* Smaller font size for small devices */
+  }
+}
+
+/* Parallax responsive adjustments */
+@media (max-width: 768px) {
+  .parallax {
+      background-attachment: scroll; /* Disable fixed attachment on small devices for better performance and compatibility */
+  }
+}

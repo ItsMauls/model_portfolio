@@ -7,7 +7,7 @@ import useVisibility from "@/hooks/useVisibility";
 export const Gallery = () => {
     const { isVisible, headingRef } = useVisibility();
     return (
-    <div className='p-8 bg-gray-50 my-4 py-14'>
+    <div id='gallery' className='p-8 bg-gray-50 my-4 py-14 w-full'>
         <div className='text-center my-8 mt-14'>
         <h1 
             ref={headingRef}
@@ -17,7 +17,6 @@ export const Gallery = () => {
         </h1>           
         </div>
         <Swiper
-            id='gallery'
             slides={3} 
             navigation={true}
             data={myGallery}/>

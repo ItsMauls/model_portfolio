@@ -4,6 +4,7 @@ import { Input } from "./Input"
 import { TextArea } from "./TextArea"
 import { useInput } from "@/hooks/useInput"
 import { api } from "@/constants/api"
+import { Button } from "../ui/Button"
 
 const defaultValue = {
     name : '',
@@ -45,9 +46,9 @@ export const Form = () => {
                     onChange={inputHandler}
                     name="message"
                     placeholder="Message"
-                    className="px-2"
+                    className="px-2 bg-black mx-auto"
                     /> 
-                <button type="submit" className="bg-black float-right p-1 rounded-sm text-white">Send</button>
+                <Button type="submit" className="my-4 ml-8 md:ml-0 px-12 py-3 bg-black md:float-right rounded-sm">Send</Button>
             </form>
         </div>
     )

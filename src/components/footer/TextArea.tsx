@@ -9,6 +9,6 @@ interface TextArea {
 
 export const TextArea = ({className, ...props} : TextArea) => {
     return (
-        <textarea {...props} className={`${cn("bg-black text-white block w-full my-2 placeholder:text-white", className)}`} {...props}/>
+        <textarea {...props} className={`${cn(" text-white block md:w-full w-5/6 md:py-1 py-3 my-2 placeholder:text-white box-border", className)}`} {...props}/>
     )
 }

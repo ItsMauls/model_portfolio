@@ -14,7 +14,7 @@ export const MyPortfolio = () => {
         >
             My Portfolio
         </h1>
-            <h1 className='mt-4'>Stock your dessert table with Hallo Butter and send treats to your whole gifting list - we’re delivering big on holiday cheer.</h1>
+            {/* <h1 className='mt-4'>Stock your dessert table with Hallo Butter and send treats to your whole gifting list - we’re delivering big on holiday cheer.</h1> */}
         </div>
         <Swiper data={myPortfolio} autoplay/>
     </div>
