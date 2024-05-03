@@ -12,8 +12,6 @@ import { MyPortfolio } from '@/constants';
 import { cn } from '@/lib/utils';
 
 
-
-
 const Swiper = ({
     data,
     delay = 1100,

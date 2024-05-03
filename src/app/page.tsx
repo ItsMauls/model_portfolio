@@ -16,9 +16,9 @@ export default function Home() {
         <Banner 
           alt={`${modelName}`}
           src={'/images/personal/ibra4.jpg'}
-          className="w-full md:w-2/3 md:mx-auto"
-          width={300}
-          height={300}
+          className="w-full md:w-2/4 md:mx-auto"
+          width={500}
+          height={500}
           quality={100}
           title={title}
         />
@@ -30,7 +30,7 @@ export default function Home() {
             className="z-50"
             alt={modelName}
             src={'/images/personal/ibra5.jpg'}
-            layout="fill"
+            fill
             objectFit="cover"
             quality={100}
           />

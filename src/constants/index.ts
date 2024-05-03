@@ -16,7 +16,7 @@ export interface MyGallery {
 }
 
 
-export const modelName = process.env.NEXT_PUBLIC_MODEL_NAME || 'Maulana Ibrahim' as string
+export const modelName = process.env.NEXT_PUBLIC_MODEL_NAME as string
 
 export const navLists : NavLists[] = [{
     name : 'Home',
@@ -44,6 +44,14 @@ export const myPortfolio : MyPortfolio[] = [{
     id : 15,
     name : 'Mayora',
     img : '/images/brands/mayora.png'
+}, {
+    id : 25,
+    name : 'Mayora',
+    img : '/images/brands/mayora.png'
+}, {
+    id : 30,
+    name : 'Mayora',
+    img : '/images/brands/mayora.png'
 }]
 
 export const myGallery : MyGallery[]= [
@@ -52,6 +60,8 @@ export const myGallery : MyGallery[]= [
     {img: '/images/personal/ibra3.jpg' , name: 'gambar', id : 3},
     {img: '/images/personal/ibra1.jpg' , name: 'gambar', id : 5},
     {img: '/images/personal/ibra4.jpg' , name: 'gambar', id : 4},
+    {img: '/images/personal/ibra2.jpg' , name: 'gambar', id : 4},
+    {img: '/images/personal/ibra3.jpg' , name: 'gambar', id : 4},
 ]
 
 

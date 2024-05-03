@@ -12,6 +12,7 @@ interface ImagePrev {
     className? : string
     width? : number
     height? : number
+    fill? : boolean
 }
 
 export const ImagePreview = ({className, ...props} : ImagePrev) => {
