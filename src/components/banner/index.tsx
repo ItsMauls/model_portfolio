@@ -23,7 +23,7 @@ export const Banner = ({ className, title, ...props } : Banner) => {
         <div className="relative w-full h-500px">
             <Image
                 {...props}
-                className={`${cn('w-full h-ful object-cover', className)}`}
+                className={`${cn('w-full h-full object-cover', className)}`}
             />
             <h1 className="absolute inset-0 flex flex-col justify-center items-center text-white p-4 md:p-8">
                 <ParallaxComp speed={25}>

@@ -46,12 +46,12 @@ export const myPortfolio : MyPortfolio[] = [{
     img : '/images/brands/mayora.png'
 }, {
     id : 25,
-    name : 'Mayora',
-    img : '/images/brands/mayora.png'
+    name : 'Rimkirim',
+    img : '/images/brands/rimkirim.jpg'
 }, {
     id : 30,
-    name : 'Mayora',
-    img : '/images/brands/mayora.png'
+    name : 'East Ventures',
+    img : '/images/brands/East-Ventures-Square-Logo.png'
 }]
 
 export const myGallery : MyGallery[]= [
