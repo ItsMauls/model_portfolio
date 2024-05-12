@@ -65,4 +65,9 @@ export const myGallery : MyGallery[]= [
 ]
 
 
-
+export const error400 = (msg : string) => {
+    return {
+        statusCode : 400,
+        msg        
+    }
+}

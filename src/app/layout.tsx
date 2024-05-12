@@ -7,7 +7,7 @@ import { p1 } from "@/constants/paragraph";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const title = "Maulana Ibrahim | Model | Software Engineer"
+const title = "Maulana Ibrahim Adiputra | Model | Software Engineer"
 
 
 export const metadata: Metadata = {

@@ -5,7 +5,9 @@ export const useSubmit = (value : string, url : string) => {
     const submitHandler = async(e: React.FormEvent<HTMLFormElement>) =>  {
     e.preventDefault()
         try {
-            await fetch(url, postRequest(value))
+            const res = await fetch(url, postRequest(value))
+            console.log(res)
+            
         } catch (error) {
             throw error
         }
