@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og';
  
 export async function GET() {
     const firstName = modelName.split(' ')[0];
-    const lastName = modelName.split(' ')[1];
+    const lastName = modelName.split(' ')[1] + modelName.split(' ')[2];
     const title = 'Model and Software Engineer'
   return new ImageResponse(
     (
