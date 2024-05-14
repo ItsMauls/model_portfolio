@@ -25,7 +25,7 @@ export const Banner = ({ className, title, ...props } : Banner) => {
                 {...props}
                 className={`${cn('w-full h-full object-cover', className)}`}
             />
-            <h1 className="absolute inset-0 flex flex-col justify-center items-center text-white p-4 md:p-8">
+            <h1 className="absolute inset-0 flex flex-col justify-center items-center text-white p-4 md:p-16">
                 <ParallaxComp speed={25}>
                     <span className="font-bold text-5xl md:text-7xl lg:text-7xl">{firstName} </span>
                     <span className="font-light text-4xl md:text-6xl lg:text-7xl">{lastName}</span>
