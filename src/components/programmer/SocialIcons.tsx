@@ -57,20 +57,6 @@ export function EmailButton({ label, size }: { label: string; size?: 'sm' | 'md'
   )
 }
 
-// Same click-only reveal as EmailButton, styled as a text CTA instead of an icon.
-export function EmailCtaButton({ children }: { children: ReactNode }) {
-  return (
-    <a
-      href="#"
-      onClick={openEmail}
-      className="inline-flex w-fit items-center gap-2 border-2 border-(--color-ink) bg-(--color-ink) px-5 py-2.5 text-sm font-bold tracking-[0.1em] text-(--color-accent) uppercase shadow-[4px_4px_0_var(--color-accent)] transition-transform duration-200 hover:-translate-y-1 hover:shadow-[4px_8px_0_var(--color-accent)] sm:text-base"
-    >
-      {children}
-      <span aria-hidden="true">&rarr;</span>
-    </a>
-  )
-}
-
 export function EmailIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-full w-full" fill="none" stroke="currentColor" strokeWidth={2}>
