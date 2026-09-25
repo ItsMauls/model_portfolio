@@ -11,7 +11,7 @@ export function ProgrammerHero() {
       id="hero"
       className="programmer-panel panel-sunset flex h-dvh w-full shrink-0 flex-col items-center justify-center gap-2 overflow-y-auto px-(--spacing-gutter) pt-16 sm:justify-between sm:gap-4 sm:px-10 sm:pt-28 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12"
     >
-      <div className="flex flex-col items-start gap-2 sm:gap-6 lg:self-center">
+      <div className="order-2 flex flex-col items-start gap-2 sm:order-none sm:gap-6 lg:self-center">
         <div className="flex flex-wrap gap-2.5 sm:gap-3">
           <EmailButton label={tContact('email')} size="sm" />
           {whatsappUrl && (
@@ -37,7 +37,7 @@ export function ProgrammerHero() {
       </div>
 
       {/* Contained portrait, flush against the section's bottom edge, with a periodic glitch flicker. */}
-      <div className="hero-glitch relative -mt-6 h-[19.2rem] w-[17.6rem] shrink-0 self-end sm:mt-0 sm:h-[43.2rem] sm:w-xl lg:h-[57.6rem] lg:w-[46.8rem]">
+      <div className="hero-glitch order-1 relative h-[30.72rem] w-[28.16rem] max-w-full shrink-0 self-end sm:order-none sm:h-[43.2rem] sm:w-xl lg:h-[57.6rem] lg:w-[46.8rem]">
         <Image
           src="/images/personal/maulana-programmer.png"
           alt={t('metaTitle')}
