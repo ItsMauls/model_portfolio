@@ -1,20 +1,28 @@
-import type { ReactNode } from 'react'
+'use client'
 
-export const email = 'maulputra09@gmail.com'
-export const whatsappUrl = 'https://wa.me/6285156755248'
-// TODO: replace with real profile URLs.
-export const linkedinUrl = 'https://linkedin.com/'
-export const githubUrl = 'https://github.com/'
+import type { MouseEvent, ReactNode } from 'react'
+
+// Split so the address never sits as a plain string in the server-rendered HTML —
+// EmailButton below joins it client-side only, which is enough to dodge static-HTML scrapers.
+const EMAIL_USER = 'maulputra09'
+const EMAIL_DOMAIN = 'gmail.com'
+
+// TODO: no WhatsApp number yet — leave blank; ProgrammerHero hides the button while this is empty.
+export const whatsappUrl = ''
+export const linkedinUrl = 'https://www.linkedin.com/in/maulana-ibrahim-adiputra-200181190/'
+export const githubUrl = 'https://github.com/ItsMauls'
 
 export function IconButton({
   href,
   label,
   size = 'md',
+  onClick,
   children,
 }: {
   href: string
   label: string
   size?: 'sm' | 'md'
+  onClick?: (event: MouseEvent<HTMLAnchorElement>) => void
   children: ReactNode
 }) {
   const dimension = size === 'sm' ? 'h-11 w-11' : 'h-14 w-14'
@@ -26,10 +34,26 @@ export function IconButton({
       target={href.startsWith('mailto:') ? undefined : '_blank'}
       rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
       aria-label={label}
+      onClick={onClick}
       className={`flex ${dimension} items-center justify-center rounded-full border-2 border-(--color-ink) bg-(--color-accent) text-white shadow-[4px_4px_0_var(--color-ink)] transition-transform duration-200 hover:-translate-y-1 hover:shadow-[4px_8px_0_var(--color-ink)]`}
     >
       <span className={iconSize}>{children}</span>
     </a>
+  )
+}
+
+// No mailto: rendered anywhere — the address is only ever assembled inside this click
+// handler, so it never appears in the server HTML or the hydrated DOM for a bot to scrape.
+export function EmailButton({ label, size }: { label: string; size?: 'sm' | 'md' }) {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    window.location.href = `mailto:${EMAIL_USER}@${EMAIL_DOMAIN}`
+  }
+
+  return (
+    <IconButton href="#" label={label} size={size} onClick={handleClick}>
+      <EmailIcon />
+    </IconButton>
   )
 }
 
