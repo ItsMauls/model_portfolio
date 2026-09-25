@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
   experimental: {
     serverActions: {
       // Default is 1MB; admin uploads (hero video, photos) need more room.
-      bodySizeLimit: '4mb',
+      // Images get re-encoded to AVIF (see lib/media.ts), so raw uploads can be generous.
+      bodySizeLimit: '30mb',
     },
   },
 }
