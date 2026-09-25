@@ -39,19 +39,23 @@
     "metaTitle": "Maulana Ibrahim Adiputra - Software Developer",
     "metaDescription": "Full-stack developer in Jakarta working across fintech, e-commerce, and SaaS with React, Next.js, Node.js, and Spring Boot.",
     "hero": {
-      "prompt": "whoami",
-      "downloadCv": "Download CV",
-      "contact": "Contact"
+      "nameLine1": "Maulana Ibrahim",
+      "nameLine2": "Adiputra",
+      "role": "Software Developer"
+    },
+    "nav": {
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "contact": "Contact",
+      "freelanceModel": "Freelance Model"
     },
     "experience": {
       "title": "Experience",
-      "command": "cat ./experience",
-      "current": "Current",
-      "moreBullets": "Show {count} more"
+      "current": "Current"
     },
     "projects": {
       "title": "Projects",
-      "command": "ls ./projects",
       "featured": "Featured",
       "stack": "Stack",
       "repo": "Repository",
@@ -60,25 +64,13 @@
     },
     "skills": {
       "title": "Skills",
-      "command": "cat ./skills",
       "exploring": "exploring"
     },
     "education": {
-      "title": "Education and certifications",
-      "command": "cat ./credentials",
-      "educationHeading": "Education",
-      "certificationsHeading": "Certifications",
-      "viewCredential": "View credential"
-    },
-    "earlier": {
-      "title": "Earlier experience",
-      "note": "Non-engineering roles, kept for completeness.",
-      "toggle": "Show earlier experience",
-      "seeModelPortfolio": "See the model portfolio"
+      "certificationsHeading": "Certifications"
     },
     "contact": {
       "title": "Contact",
-      "command": "cat ./contact",
       "intro": "Open to full-stack roles and freelance projects.",
       "email": "Email",
       "linkedin": "LinkedIn",
