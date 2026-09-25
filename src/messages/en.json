@@ -1,0 +1,131 @@
+{
+  "common": {
+    "skipToContent": "Skip to content",
+    "switchToProgrammer": "Switch to Programmer",
+    "switchToModel": "Switch to Model",
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Indonesian",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "play": "Play",
+    "pause": "Pause",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "opensInNewTab": "opens in a new tab",
+    "present": "Present"
+  },
+  "localeHint": {
+    "message": "This site is also available in Indonesian.",
+    "action": "Read in Indonesian",
+    "dismiss": "Dismiss"
+  },
+  "landing": {
+    "metaTitle": "Maulana Ibrahim Adiputra",
+    "metaDescription": "Software Developer and freelance model based in Jakarta. Two portfolios, one person.",
+    "chooseAPath": "Choose a path",
+    "programmer": {
+      "word": "Programmer",
+      "tagline": "Full-stack developer building fintech, e-commerce, and SaaS products.",
+      "cta": "View developer work"
+    },
+    "model": {
+      "word": "Model",
+      "tagline": "Freelance model for campaigns, editorial, and brand collaborations.",
+      "cta": "View model portfolio"
+    }
+  },
+  "programmer": {
+    "metaTitle": "Maulana Ibrahim Adiputra - Software Developer",
+    "metaDescription": "Full-stack developer in Jakarta working across fintech, e-commerce, and SaaS with React, Next.js, Node.js, and Spring Boot.",
+    "hero": {
+      "prompt": "whoami",
+      "downloadCv": "Download CV",
+      "contact": "Contact"
+    },
+    "experience": {
+      "title": "Experience",
+      "command": "cat ./experience",
+      "current": "Current",
+      "moreBullets": "Show {count} more"
+    },
+    "projects": {
+      "title": "Projects",
+      "command": "ls ./projects",
+      "featured": "Featured",
+      "stack": "Stack",
+      "repo": "Repository",
+      "live": "Live site",
+      "expand": "Expand {title}"
+    },
+    "skills": {
+      "title": "Skills",
+      "command": "cat ./skills",
+      "exploring": "exploring"
+    },
+    "education": {
+      "title": "Education and certifications",
+      "command": "cat ./credentials",
+      "educationHeading": "Education",
+      "certificationsHeading": "Certifications",
+      "viewCredential": "View credential"
+    },
+    "earlier": {
+      "title": "Earlier experience",
+      "note": "Non-engineering roles, kept for completeness.",
+      "toggle": "Show earlier experience",
+      "seeModelPortfolio": "See the model portfolio"
+    },
+    "contact": {
+      "title": "Contact",
+      "command": "cat ./contact",
+      "intro": "Open to full-stack roles and freelance projects.",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "model": {
+    "metaTitle": "Maulana Ibrahim Adiputra - Model",
+    "metaDescription": "Freelance model based in Jakarta. Campaign, editorial, and commercial work for brands and agencies.",
+    "hero": {
+      "label": "Selected work",
+      "carousel": "Featured campaigns",
+      "slideOf": "Slide {current} of {total}",
+      "empty": "Campaign work is being added."
+    },
+    "brands": {
+      "title": "Brands",
+      "empty": "Brand collaborations are being added.",
+      "viewCampaign": "View the {brand} campaign"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "hint": "Drag to browse",
+      "empty": "Photographs are being added.",
+      "openPhoto": "Open photograph {index}"
+    },
+    "profile": {
+      "title": "Profile",
+      "compCard": "Download comp card (PDF)",
+      "booking": "Bookings",
+      "instagram": "Instagram",
+      "stats": {
+        "height": "Height",
+        "chest": "Chest",
+        "waist": "Waist",
+        "shoe": "Shoe",
+        "hair": "Hair",
+        "eyes": "Eyes",
+        "city": "Based in"
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "That page does not exist.",
+    "home": "Go home"
+  }
+}
