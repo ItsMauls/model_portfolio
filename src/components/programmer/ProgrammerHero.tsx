@@ -9,7 +9,7 @@ export function ProgrammerHero() {
   return (
     <section
       id="hero"
-      className="programmer-panel panel-sunset flex h-dvh w-full shrink-0 flex-col items-center justify-center gap-2 overflow-y-auto px-(--spacing-gutter) pt-16 sm:justify-between sm:gap-4 sm:px-10 sm:pt-28 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12"
+      className="programmer-panel panel-sunset flex h-dvh w-full shrink-0 flex-col items-center justify-start gap-2 overflow-y-auto px-(--spacing-gutter) pt-14 sm:justify-between sm:gap-4 sm:px-10 sm:pt-28 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12"
     >
       <div className="order-2 flex flex-col items-start gap-2 sm:order-none sm:gap-6 lg:self-center">
         <div className="flex flex-wrap gap-2.5 sm:gap-3">
