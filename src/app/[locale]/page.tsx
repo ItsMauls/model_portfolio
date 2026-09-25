@@ -11,7 +11,7 @@ export default function LandingPage() {
         <SplitBackdrop />
         <LandingHeader />
 
-        <div className="hero-grid relative z-20 grid flex-1 grid-cols-1 items-stretch px-7 sm:px-10 lg:px-12">
+        <div className="hero-grid relative z-20 grid flex-1 grid-cols-1 grid-rows-2 items-stretch px-7 sm:px-10 lg:grid-rows-1 lg:px-12">
           <DeveloperHero />
           <ModelHero />
         </div>

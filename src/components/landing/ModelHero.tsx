@@ -8,7 +8,7 @@ export function ModelHero() {
   return (
     <Link
       href="/model"
-      className="hero-link-model group flex h-full min-w-0 flex-col overflow-hidden py-8 lg:items-end lg:justify-center lg:py-4"
+      className="hero-link-model group flex h-full min-w-0 flex-col justify-center overflow-hidden py-8 lg:items-end lg:py-4"
     >
       <div className="w-full max-w-[340px] lg:mr-4">
         <span className="mb-2 flex items-center gap-2 font-mono text-[11px] font-bold tracking-widest text-[#ea580c] uppercase sm:text-xs">
