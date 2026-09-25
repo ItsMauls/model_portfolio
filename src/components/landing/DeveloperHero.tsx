@@ -8,7 +8,7 @@ export function DeveloperHero() {
   return (
     <Link
       href="/programmer"
-      className="hero-link-dev group flex h-full min-w-0 flex-col justify-center overflow-hidden py-8 lg:py-4"
+      className="hero-link-dev group flex h-full min-w-0 flex-col justify-center overflow-hidden pt-20 pb-8 lg:py-4"
     >
       <h1 className="font-condensed text-[42px] leading-[0.88] font-bold tracking-tighter text-white uppercase sm:text-[76px] md:text-[92px] lg:text-[98px] xl:text-[112px]">
         {t('line1')}

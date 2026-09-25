@@ -15,7 +15,7 @@ export function ModelHero() {
           {t('availableFor')}
           <span className="h-2 w-2 animate-pulse rounded-full bg-[#ea580c]" />
         </span>
-        <span className="flex items-center text-3xl font-extrabold tracking-tight text-neutral-900 transition-transform duration-200 group-hover:translate-x-1.5 sm:text-4xl md:text-5xl">
+        <span className="flex items-center text-3xl font-extrabold tracking-tight text-white transition-transform duration-200 group-hover:translate-x-1.5 sm:text-4xl md:text-5xl lg:text-neutral-900">
           {t('model.headline')}
         </span>
       </div>
