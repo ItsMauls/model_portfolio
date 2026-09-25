@@ -64,14 +64,19 @@
     },
     "skills": {
       "title": "Keahlian",
+      "primary": "Stack utama",
+      "familiar": "Pernah digunakan",
       "exploring": "sedang dipelajari"
     },
     "education": {
-      "certificationsHeading": "Sertifikasi"
+      "certificationsHeading": "Sertifikasi",
+      "moreOnLinkedin": "Lihat sertifikasi lainnya di LinkedIn"
     },
     "contact": {
       "title": "Kontak",
       "intro": "Terbuka untuk posisi full-stack maupun proyek lepas.",
+      "available": "Terbuka untuk proyek lepas",
+      "cta": "Hubungi saya",
       "email": "Email",
       "linkedin": "LinkedIn",
       "github": "GitHub",

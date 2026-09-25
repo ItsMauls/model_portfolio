@@ -152,9 +152,8 @@ function SkillsSection() {
     <section id="skills" className={panelClass}>
       <h2 className="font-condensed text-3xl font-bold tracking-tight uppercase sm:text-5xl">{tSkills('title')}</h2>
       <div className="mt-6 space-y-6 sm:mt-8 sm:space-y-8">
-        <SkillGroup label="Language" items={skills.language} exploring={skills.exploring} />
-        <SkillGroup label="Front End" items={skills.frontend} />
-        <SkillGroup label="Back End" items={skills.backend} />
+        <SkillGroup label={tSkills('primary')} items={skills.primary} exploring={skills.exploring} />
+        <SkillGroup label={tSkills('familiar')} items={skills.familiar} exploring={skills.exploring} />
       </div>
     </section>
   )

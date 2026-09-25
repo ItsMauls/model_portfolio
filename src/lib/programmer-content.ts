@@ -95,31 +95,36 @@ export const projects: ProjectEntry[] = [
   },
 ]
 
+// Primary: the stack actually driving day-to-day work across recent roles (see experience above).
+// Familiar: used before, or occasionally, but not the daily driver.
 export const skills = {
-  language: ['JavaScript', 'TypeScript', 'PHP', 'Golang'],
   exploring: ['Golang'],
-  frontend: [
+  primary: [
+    'JavaScript',
+    'TypeScript',
     'React JS',
-    'Redux',
-    'React Native',
-    'HTML & CSS',
-    'Apollo Client',
-    'Expo',
-    'jQuery',
     'Next.js',
-    'Tailwind CSS',
-    'Angular',
-  ],
-  backend: [
     'Node JS',
     'Express',
-    'Sequelize',
     'PostgreSQL',
     'GraphQL',
+    'REST API',
+  ],
+  familiar: [
+    'PHP',
+    'Golang',
+    'React Native',
+    'Redux',
+    'HTML & CSS',
+    'Apollo Client',
     'Apollo Server',
+    'Expo',
+    'jQuery',
+    'Tailwind CSS',
+    'Angular',
+    'Sequelize',
     'MongoDB',
     'Redis',
-    'REST API',
     'Socket.io',
     'Jest',
     'AWS',
@@ -137,20 +142,55 @@ export type CertificationEntry = {
   url?: string
   /** Filename under /public/certificates/, e.g. 'udemy-web-bootcamp.png'. Add a screenshot and set this to show it on the card. */
   image?: string
+  /** Shown by default; the rest are still listed but tucked behind "see more on LinkedIn". */
+  featured?: boolean
 }
 
 export const certifications: CertificationEntry[] = [
-  {
-    issuer: 'English Academy by RuangGuru',
-    title: 'B2 English Certificate',
-    id: 'certificate-of-completion',
-    image: 'english-academy-b2.png',
-  },
   {
     issuer: 'Hacktiv8',
     title: 'Fullstack Javascript Immersive',
     id: '638ac3c3-70ee-4592-8a94-bf550cfc81c0',
     image: 'hacktiv8-fullstack-js.jpg',
+    featured: true,
+  },
+  {
+    issuer: 'Udemy',
+    title: 'NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)',
+    id: 'UC-06f77234-9fd9-4791-acbf-5394396c0b37',
+    url: 'https://www.udemy.com/certificate/UC-06f77234-9fd9-4791-acbf-5394396c0b37/',
+    image: 'udemy-nodejs-complete-guide.jpg',
+    featured: true,
+  },
+  {
+    issuer: 'Udemy',
+    title: 'The Complete SQL Bootcamp: Go From Zero to Hero',
+    id: 'UC-53b61232-7931-4f4c-b2ba-8a9183861d91',
+    url: 'https://www.udemy.com/certificate/UC-53b61232-7931-4f4c-b2ba-8a9183861d91/',
+    image: 'udemy-sql-bootcamp.jpg',
+    featured: true,
+  },
+  {
+    issuer: 'HackerRank',
+    title: 'SQL (Intermediate)',
+    id: 'e6da6daa204d',
+    url: 'https://www.hackerrank.com/certificates/e6da6daa204d',
+    image: 'hackerrank-sql.png',
+    featured: true,
+  },
+  {
+    issuer: 'HackerRank',
+    title: 'Node.js (Intermediate)',
+    id: 'e6da6daa204d',
+    url: 'https://www.hackerrank.com/certificates/e6da6daa204d',
+    image: 'hackerrank-nodejs.png',
+    featured: true,
+  },
+  {
+    issuer: 'English Academy by RuangGuru',
+    title: 'B2 English Certificate',
+    id: 'certificate-of-completion',
+    image: 'english-academy-b2.png',
   },
   {
     issuer: 'Udemy',
@@ -160,38 +200,10 @@ export const certifications: CertificationEntry[] = [
     image: 'udemy-web-dev-bootcamp.jpg',
   },
   {
-    issuer: 'Udemy',
-    title: 'The Complete SQL Bootcamp: Go From Zero to Hero',
-    id: 'UC-53b61232-7931-4f4c-b2ba-8a9183861d91',
-    url: 'https://www.udemy.com/certificate/UC-53b61232-7931-4f4c-b2ba-8a9183861d91/',
-    image: 'udemy-sql-bootcamp.jpg',
-  },
-  {
-    issuer: 'Udemy',
-    title: 'NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)',
-    id: 'UC-06f77234-9fd9-4791-acbf-5394396c0b37',
-    url: 'https://www.udemy.com/certificate/UC-06f77234-9fd9-4791-acbf-5394396c0b37/',
-    image: 'udemy-nodejs-complete-guide.jpg',
-  },
-  {
-    issuer: 'HackerRank',
-    title: 'Node.js (Intermediate)',
-    id: 'e6da6daa204d',
-    url: 'https://www.hackerrank.com/certificates/e6da6daa204d',
-    image: 'hackerrank-nodejs.png',
-  },
-  {
     issuer: 'HackerRank',
     title: 'Problem Solving (Intermediate)',
     id: 'b70fc22104fd',
     url: 'https://www.hackerrank.com/certificates/b70fc22104fd',
     image: 'hackerrank-problem-solving.png',
-  },
-  {
-    issuer: 'HackerRank',
-    title: 'SQL (Intermediate)',
-    id: 'e6da6daa204d',
-    url: 'https://www.hackerrank.com/certificates/e6da6daa204d',
-    image: 'hackerrank-sql.png',
   },
 ]
