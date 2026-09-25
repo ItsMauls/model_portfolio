@@ -27,26 +27,26 @@
 
   /* Semantic colours. Defaults are the programmer palette; each persona
      block below reassigns them. Never reference a raw hex outside this file. */
-  --color-bg: #10233f;
-  --color-surface: #16294a;
-  --color-ink: #dce6f2;
-  --color-muted: #8fa5c2;
-  --color-line: #2a4670;
-  --color-accent: #f2b544;
-  --color-on-accent: #10233f;
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-ink: #18181b;
+  --color-muted: #6b7280;
+  --color-line: #e4e4e7;
+  --color-accent: #ea580c;
+  --color-on-accent: #ffffff;
 
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Programmer: navy terminal. */
+/* Programmer: orange-on-white terminal, matching the landing page's accent. */
 [data-persona='programmer'] {
-  --color-bg: #10233f;
-  --color-surface: #16294a;
-  --color-ink: #dce6f2;
-  --color-muted: #8fa5c2;
-  --color-line: #2a4670;
-  --color-accent: #f2b544;
-  --color-on-accent: #10233f;
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-ink: #18181b;
+  --color-muted: #6b7280;
+  --color-line: #e4e4e7;
+  --color-accent: #ea580c;
+  --color-on-accent: #ffffff;
 }
 
 /* Model: editorial paper. */
@@ -60,16 +60,10 @@
   --color-on-accent: #f3f2ef;
 }
 
-/* Dark mode. The programmer palette is already dark, so it only deepens a
-   little; the model palette inverts to a gallery-at-night ink. Both keep
-   >= 4.5:1 body contrast. */
+/* Dark mode. The programmer persona stays fixed to its white/sunset-orange
+   look by design, so only the model palette inverts to a gallery-at-night
+   ink (keeping >= 4.5:1 body contrast). */
 @media (prefers-color-scheme: dark) {
-  [data-persona='programmer'] {
-    --color-bg: #0b1930;
-    --color-surface: #12233f;
-    --color-line: #24406a;
-  }
-
   [data-persona='model'] {
     --color-bg: #15140f;
     --color-surface: #1e1c17;
@@ -133,6 +127,92 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* Programmer: vertical snap-scroll panels, alternating sunset/paper
+   backgrounds. A sharp two-stop gradient, kept simple, angled away from the
+   hero title and portrait so neither gets fought for attention. */
+[data-persona='programmer'] {
+  --gradient-sunset: radial-gradient(circle at 15% 20%, #ffd36b 0%, #ff8a3d 45%, #ff7a1a 100%);
+}
+
+.programmer-panels {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: contain;
+}
+
+.programmer-panel {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Projects/Skills: two stacked snap panels on mobile, one combined panel on
+   desktop (see ProjectsSkillsSection.tsx). At lg+ the child sections stop being
+   snap targets themselves — their `contents` wrapper becomes the single panel. */
+@media (min-width: 1024px) {
+  .programmer-panel-grid-cell {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
+
+.panel-sunset {
+  background: var(--gradient-sunset);
+}
+
+/* 80's retro block-letter title: gradient chrome fill + hard offset shadow,
+   the extruded-plastic look, built from colours already in the palette. */
+.text-retro-80s {
+  background: linear-gradient(180deg, #fff5cc 0%, #ffc93c 45%, #ff7a1a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-ink);
+  text-shadow:
+    3px 3px 0 var(--color-ink),
+    6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.panel-paper {
+  background-color: var(--color-bg);
+}
+
+/* Hero portrait: a brief digital-glitch flicker every few seconds, quiet the
+   rest of the time. Reduced-motion users get the global animation-kill rule
+   above, so no separate opt-out is needed here. */
+@keyframes hero-glitch {
+  0%,
+  93%,
+  100% {
+    transform: translate(0, 0);
+    filter: none;
+    clip-path: inset(0 0 0 0);
+  }
+  93.5% {
+    transform: translate(-1.5%, 0.5%);
+    filter: hue-rotate(90deg) saturate(3);
+    clip-path: inset(15% 0 55% 0);
+  }
+  94.5% {
+    transform: translate(1.5%, -0.5%);
+    filter: hue-rotate(-70deg) contrast(1.4);
+    clip-path: inset(55% 0 10% 0);
+  }
+  95.5% {
+    transform: translate(-1%, 0.3%);
+    filter: none;
+    clip-path: inset(35% 0 35% 0);
+  }
+  96.5% {
+    transform: translate(0, 0);
+    filter: none;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hero-glitch {
+  animation: hero-glitch 6s steps(1) infinite;
 }
 
 /* Landing hero: hovering the developer or model option grows its column and
@@ -216,6 +296,10 @@
 
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+.marquee-track-reverse {
+  animation-direction: reverse;
 }
 
 @media (prefers-reduced-motion: reduce) {

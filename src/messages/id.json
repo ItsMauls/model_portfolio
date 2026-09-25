@@ -39,19 +39,23 @@
     "metaTitle": "Maulana Ibrahim Adiputra - Software Developer",
     "metaDescription": "Full-stack developer di Jakarta yang menangani proyek fintech, e-commerce, dan SaaS dengan React, Next.js, Node.js, dan Spring Boot.",
     "hero": {
-      "prompt": "whoami",
-      "downloadCv": "Unduh CV",
-      "contact": "Hubungi"
+      "nameLine1": "Maulana Ibrahim",
+      "nameLine2": "Adiputra",
+      "role": "Software Developer"
+    },
+    "nav": {
+      "experience": "Pengalaman",
+      "projects": "Proyek",
+      "skills": "Keahlian",
+      "contact": "Kontak",
+      "freelanceModel": "Freelance Model"
     },
     "experience": {
       "title": "Pengalaman",
-      "command": "cat ./pengalaman",
-      "current": "Saat ini",
-      "moreBullets": "Tampilkan {count} lainnya"
+      "current": "Saat ini"
     },
     "projects": {
       "title": "Proyek",
-      "command": "ls ./proyek",
       "featured": "Unggulan",
       "stack": "Teknologi",
       "repo": "Repositori",
@@ -60,25 +64,13 @@
     },
     "skills": {
       "title": "Keahlian",
-      "command": "cat ./keahlian",
       "exploring": "sedang dipelajari"
     },
     "education": {
-      "title": "Pendidikan dan sertifikasi",
-      "command": "cat ./kredensial",
-      "educationHeading": "Pendidikan",
-      "certificationsHeading": "Sertifikasi",
-      "viewCredential": "Lihat kredensial"
-    },
-    "earlier": {
-      "title": "Pengalaman terdahulu",
-      "note": "Peran di luar bidang teknik, dicantumkan sebagai pelengkap.",
-      "toggle": "Tampilkan pengalaman terdahulu",
-      "seeModelPortfolio": "Lihat portofolio model"
+      "certificationsHeading": "Sertifikasi"
     },
     "contact": {
       "title": "Kontak",
-      "command": "cat ./kontak",
       "intro": "Terbuka untuk posisi full-stack maupun proyek lepas.",
       "email": "Email",
       "linkedin": "LinkedIn",
