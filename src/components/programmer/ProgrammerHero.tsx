@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { email, githubUrl, GithubIcon, IconButton, linkedinUrl, LinkedinIcon, whatsappUrl, WhatsappIcon, EmailIcon } from './SocialIcons'
+import { EmailButton, githubUrl, GithubIcon, IconButton, linkedinUrl, LinkedinIcon, whatsappUrl, WhatsappIcon } from './SocialIcons'
 
 export function ProgrammerHero() {
   const t = useTranslations('programmer')
@@ -13,12 +13,12 @@ export function ProgrammerHero() {
     >
       <div className="flex flex-col items-start gap-2 sm:gap-6 lg:self-center">
         <div className="flex flex-wrap gap-2.5 sm:gap-3">
-          <IconButton href={`mailto:${email}`} label={tContact('email')} size="sm">
-            <EmailIcon />
-          </IconButton>
-          <IconButton href={whatsappUrl} label={tContact('whatsapp')} size="sm">
-            <WhatsappIcon />
-          </IconButton>
+          <EmailButton label={tContact('email')} size="sm" />
+          {whatsappUrl && (
+            <IconButton href={whatsappUrl} label={tContact('whatsapp')} size="sm">
+              <WhatsappIcon />
+            </IconButton>
+          )}
           <IconButton href={linkedinUrl} label={tContact('linkedin')} size="sm">
             <LinkedinIcon />
           </IconButton>
