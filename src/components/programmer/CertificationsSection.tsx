@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { certifications } from '@/lib/programmer-content'
 import type { CertificationEntry } from '@/lib/programmer-content'
+import { linkedinUrl } from './SocialIcons'
 
 function CertCard({ cert, className = '' }: { cert: CertificationEntry; className?: string }) {
   return (
@@ -50,11 +51,13 @@ function CertRow({ items, reverse }: { items: CertificationEntry[]; reverse?: bo
   )
 }
 
+// Only the featured certs show by default; the rest are still real, just tucked behind the LinkedIn link.
 export function CertificationsSection() {
   const t = useTranslations('programmer.education')
-  const mid = Math.ceil(certifications.length / 2)
-  const row1 = certifications.slice(0, mid)
-  const row2 = certifications.slice(mid)
+  const featured = certifications.filter((cert) => cert.featured)
+  const mid = Math.ceil(featured.length / 2)
+  const row1 = featured.slice(0, mid)
+  const row2 = featured.slice(mid)
 
   return (
     <section
@@ -71,11 +74,20 @@ export function CertificationsSection() {
         <CertRow items={row2} reverse />
       </div>
 
-      <ul className="mt-6 hidden grid-cols-4 gap-4 sm:mt-8 lg:grid">
-        {certifications.map((cert) => (
+      <ul className="mt-6 hidden grid-cols-5 gap-4 sm:mt-8 lg:grid">
+        {featured.map((cert) => (
           <CertCard key={`${cert.issuer}-${cert.title}`} cert={cert} />
         ))}
       </ul>
+
+      <a
+        href={linkedinUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-semibold underline decoration-(--color-accent) decoration-2 underline-offset-2 hover:text-(--color-accent) sm:mt-8"
+      >
+        {t('moreOnLinkedin')} <span aria-hidden="true">&#8599;</span>
+      </a>
     </section>
   )
 }

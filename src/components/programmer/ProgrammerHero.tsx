@@ -1,6 +1,16 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { EmailButton, githubUrl, GithubIcon, IconButton, linkedinUrl, LinkedinIcon, whatsappUrl, WhatsappIcon } from './SocialIcons'
+import {
+  EmailButton,
+  EmailCtaButton,
+  githubUrl,
+  GithubIcon,
+  IconButton,
+  linkedinUrl,
+  LinkedinIcon,
+  whatsappUrl,
+  WhatsappIcon,
+} from './SocialIcons'
 
 export function ProgrammerHero() {
   const t = useTranslations('programmer')
@@ -34,6 +44,11 @@ export function ProgrammerHero() {
         <p className="hero-glitch inline-flex w-fit -rotate-2 items-center border-2 border-(--color-ink) bg-(--color-ink) px-3 py-1.5 text-sm font-bold tracking-[0.15em] text-(--color-accent) uppercase shadow-[3px_3px_0_var(--color-accent)] sm:text-base">
           {t('hero.role')}
         </p>
+
+        <div className="flex flex-col items-start gap-2">
+          <p className="text-sm font-semibold text-(--color-ink)/80 sm:text-base">{tContact('available')}</p>
+          <EmailCtaButton>{tContact('cta')}</EmailCtaButton>
+        </div>
       </div>
 
       {/* Contained portrait, flush against the section's bottom edge, with a periodic glitch flicker. */}

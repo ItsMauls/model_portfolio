@@ -44,16 +44,30 @@ export function IconButton({
 
 // No mailto: rendered anywhere — the address is only ever assembled inside this click
 // handler, so it never appears in the server HTML or the hydrated DOM for a bot to scrape.
-export function EmailButton({ label, size }: { label: string; size?: 'sm' | 'md' }) {
-  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault()
-    window.location.href = `mailto:${EMAIL_USER}@${EMAIL_DOMAIN}`
-  }
+function openEmail(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault()
+  window.location.href = `mailto:${EMAIL_USER}@${EMAIL_DOMAIN}`
+}
 
+export function EmailButton({ label, size }: { label: string; size?: 'sm' | 'md' }) {
   return (
-    <IconButton href="#" label={label} size={size} onClick={handleClick}>
+    <IconButton href="#" label={label} size={size} onClick={openEmail}>
       <EmailIcon />
     </IconButton>
+  )
+}
+
+// Same click-only reveal as EmailButton, styled as a text CTA instead of an icon.
+export function EmailCtaButton({ children }: { children: ReactNode }) {
+  return (
+    <a
+      href="#"
+      onClick={openEmail}
+      className="inline-flex w-fit items-center gap-2 border-2 border-(--color-ink) bg-(--color-ink) px-5 py-2.5 text-sm font-bold tracking-[0.1em] text-(--color-accent) uppercase shadow-[4px_4px_0_var(--color-accent)] transition-transform duration-200 hover:-translate-y-1 hover:shadow-[4px_8px_0_var(--color-accent)] sm:text-base"
+    >
+      {children}
+      <span aria-hidden="true">&rarr;</span>
+    </a>
   )
 }
 

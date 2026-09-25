@@ -64,14 +64,19 @@
     },
     "skills": {
       "title": "Skills",
+      "primary": "Primary stack",
+      "familiar": "Familiar with",
       "exploring": "exploring"
     },
     "education": {
-      "certificationsHeading": "Certifications"
+      "certificationsHeading": "Certifications",
+      "moreOnLinkedin": "See more certifications on LinkedIn"
     },
     "contact": {
       "title": "Contact",
       "intro": "Open to full-stack roles and freelance projects.",
+      "available": "Available for freelance projects",
+      "cta": "Hire me",
       "email": "Email",
       "linkedin": "LinkedIn",
       "github": "GitHub",
