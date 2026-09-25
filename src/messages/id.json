@@ -1,0 +1,143 @@
+{
+  "common": {
+    "skipToContent": "Lewati ke konten",
+    "switchToProgrammer": "Beralih ke Programmer",
+    "switchToModel": "Beralih ke Model",
+    "language": "Bahasa",
+    "english": "Inggris",
+    "indonesian": "Indonesia",
+    "close": "Tutup",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya",
+    "play": "Putar",
+    "pause": "Jeda",
+    "showMore": "Selengkapnya",
+    "showLess": "Ringkas",
+    "opensInNewTab": "terbuka di tab baru",
+    "present": "Sekarang"
+  },
+  "localeHint": {
+    "message": "Situs ini juga tersedia dalam Bahasa Indonesia.",
+    "action": "Baca dalam Bahasa Indonesia",
+    "dismiss": "Tutup"
+  },
+  "landing": {
+    "metaTitle": "Maulana Ibrahim Adiputra",
+    "metaDescription": "Software Developer sekaligus model lepas yang berbasis di Jakarta. Dua portofolio, satu orang.",
+    "availableFor": "Terbuka untuk proyek lepas",
+    "developer": {
+      "line1": "Software",
+      "line2": "Developer",
+      "tagline": "Desain yang menginspirasi. Sistem yang scalable.",
+      "cta": "Lihat karya"
+    },
+    "model": {
+      "headline": "Model Lepas"
+    }
+  },
+  "programmer": {
+    "metaTitle": "Maulana Ibrahim Adiputra - Software Developer",
+    "metaDescription": "Full-stack developer di Jakarta yang menangani proyek fintech, e-commerce, dan SaaS dengan React, Next.js, Node.js, dan Spring Boot.",
+    "hero": {
+      "prompt": "whoami",
+      "downloadCv": "Unduh CV",
+      "contact": "Hubungi"
+    },
+    "experience": {
+      "title": "Pengalaman",
+      "command": "cat ./pengalaman",
+      "current": "Saat ini",
+      "moreBullets": "Tampilkan {count} lainnya"
+    },
+    "projects": {
+      "title": "Proyek",
+      "command": "ls ./proyek",
+      "featured": "Unggulan",
+      "stack": "Teknologi",
+      "repo": "Repositori",
+      "live": "Situs langsung",
+      "expand": "Buka {title}"
+    },
+    "skills": {
+      "title": "Keahlian",
+      "command": "cat ./keahlian",
+      "exploring": "sedang dipelajari"
+    },
+    "education": {
+      "title": "Pendidikan dan sertifikasi",
+      "command": "cat ./kredensial",
+      "educationHeading": "Pendidikan",
+      "certificationsHeading": "Sertifikasi",
+      "viewCredential": "Lihat kredensial"
+    },
+    "earlier": {
+      "title": "Pengalaman terdahulu",
+      "note": "Peran di luar bidang teknik, dicantumkan sebagai pelengkap.",
+      "toggle": "Tampilkan pengalaman terdahulu",
+      "seeModelPortfolio": "Lihat portofolio model"
+    },
+    "contact": {
+      "title": "Kontak",
+      "command": "cat ./kontak",
+      "intro": "Terbuka untuk posisi full-stack maupun proyek lepas.",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "model": {
+    "metaTitle": "Maulana Ibrahim Adiputra - Model",
+    "metaDescription": "Model lepas yang berbasis di Jakarta. Karya kampanye, editorial, dan komersial untuk brand dan agensi.",
+    "nav": {
+      "work": "Karya",
+      "photo": "Foto",
+      "sayHello": "Say hello"
+    },
+    "hero": {
+      "name": "Maulana Ibrahim Adiputra",
+      "role": "Model Lepas",
+      "label": "Karya pilihan",
+      "carousel": "Kampanye unggulan",
+      "slideOf": "Slide {current} dari {total}",
+      "empty": "Karya kampanye sedang ditambahkan."
+    },
+    "brands": {
+      "title": "Karya Pilihan",
+      "empty": "Kolaborasi brand sedang ditambahkan.",
+      "viewCampaign": "Lihat kampanye {brand}"
+    },
+    "gallery": {
+      "title": "Foto",
+      "hint": "Geser untuk menjelajah",
+      "empty": "Foto sedang ditambahkan.",
+      "openPhoto": "Buka foto {index}"
+    },
+    "contact": {
+      "title": "Say hello",
+      "subtitle": "Terbuka untuk booking, editorial, dan kampanye.",
+      "booking": "Booking",
+      "instagram": "Instagram"
+    },
+    "profile": {
+      "title": "Profil",
+      "compCard": "Unduh comp card (PDF)",
+      "booking": "Pemesanan",
+      "instagram": "Instagram",
+      "stats": {
+        "height": "Tinggi",
+        "chest": "Dada",
+        "waist": "Pinggang",
+        "shoe": "Sepatu",
+        "hair": "Rambut",
+        "eyes": "Mata",
+        "city": "Berbasis di"
+      }
+    }
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "description": "Halaman tersebut tidak ada.",
+    "home": "Ke beranda"
+  }
+}

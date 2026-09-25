@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://mauladiputra.site
-
-# Sitemaps
-Sitemap: https://mauladiputra.site/sitemap.xml

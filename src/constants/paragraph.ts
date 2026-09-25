@@ -1,6 +1,0 @@
-import { modelName } from "."
-
-export const p1 = `Meet ${modelName}, a software engineer and part-time model from Jakarta. ${modelName.split(' ')[0]}'s modeling career began unexpectedly during a friend's photography project, sparking a passion that turned into a rewarding side hustle.`
-export const p2 = `${modelName.split(' ')[0]} now focuses on lifestyle and fitness modeling, often integrating his tech background into his shoots. This unique blend has attracted tech-forward, wellness-promoting brands interested in sustainable practices.`
-export const p3 = `Away from the camera, ${modelName.split(' ')[0]} advocates for inclusivity in tech and fashion. He uses his dual career to inspire conversations about balancing passions and redefining success.`
-export const p4 = `"By coding software solutions by day and modeling on weekends, ${modelName.split(' ')[0]} is always looking for new ways to grow and connect at the crossroads of technology and creativity. His journey embodies continuous learning and a commitment to excellence.`

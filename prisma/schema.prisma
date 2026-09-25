@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Local dev uses SQLite so /admin works with zero setup. Swap to
+  // `provider = "postgresql"` and point DATABASE_URL at Neon for production
+  // (see .env.example) — the models below don't need to change.
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model SiteSettings {
+  id           Int    @id @default(1)
+  heroMediaUrl String @default("")
+}
+
+model WorkItem {
+  id       String @id @default(cuid())
+  brand    String
+  role     String
+  imageUrl String
+  order    Int    @default(0)
+}
+
+model GalleryPhoto {
+  id       String @id @default(cuid())
+  imageUrl String
+  order    Int    @default(0)
+}

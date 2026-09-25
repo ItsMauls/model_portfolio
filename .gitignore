@@ -1,36 +1,29 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+node_modules
+.pnpm-store
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+.next
+out
+build
+next-env.d.ts
+*.tsbuildinfo
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
+.env
 .env*.local
 
-# vercel
-.vercel
+# Local SQLite dev database.
+prisma/*.db
+prisma/*.db-journal
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Admin uploads when BLOB_READ_WRITE_TOKEN isn't set.
+public/uploads
+
+.vercel
+.DS_Store
+npm-debug.log*
+
+/test-results
+/playwright-report
+/blob-report
+/playwright/.cache
+
+src/generated

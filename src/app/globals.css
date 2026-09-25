@@ -1,108 +1,225 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Design tokens.
+
+   Two visual languages, one person. Everything shared (spacing, radii, the
+   grid) lives here once; each persona only overrides colour and type.
+
+   Personas are scoped by a `data-persona` attribute on a wrapping element
+   rather than by route, so the landing page can show both at once.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-display: var(--font-bodoni), ui-serif, Georgia, serif;
+  --font-condensed: var(--font-antonio), ui-sans-serif, sans-serif;
+
+  /* Shared spacing scale. Tailwind's default 4px step, plus the page rhythm. */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 3.5rem;
+  --spacing-gutter: 1.25rem;
+
+  --radius-pill: 9999px;
+
+  --container-measure: 68ch;
+
+  /* Semantic colours. Defaults are the programmer palette; each persona
+     block below reassigns them. Never reference a raw hex outside this file. */
+  --color-bg: #10233f;
+  --color-surface: #16294a;
+  --color-ink: #dce6f2;
+  --color-muted: #8fa5c2;
+  --color-line: #2a4670;
+  --color-accent: #f2b544;
+  --color-on-accent: #10233f;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Programmer: navy terminal. */
+[data-persona='programmer'] {
+  --color-bg: #10233f;
+  --color-surface: #16294a;
+  --color-ink: #dce6f2;
+  --color-muted: #8fa5c2;
+  --color-line: #2a4670;
+  --color-accent: #f2b544;
+  --color-on-accent: #10233f;
+}
+
+/* Model: editorial paper. */
+[data-persona='model'] {
+  --color-bg: #f3f2ef;
+  --color-surface: #ffffff;
+  --color-ink: #1b1b1f;
+  --color-muted: #6b6863;
+  --color-line: #d2cec7;
+  --color-accent: #7a1f2b;
+  --color-on-accent: #f3f2ef;
+}
+
+/* Dark mode. The programmer palette is already dark, so it only deepens a
+   little; the model palette inverts to a gallery-at-night ink. Both keep
+   >= 4.5:1 body contrast. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  [data-persona='programmer'] {
+    --color-bg: #0b1930;
+    --color-surface: #12233f;
+    --color-line: #24406a;
+  }
+
+  [data-persona='model'] {
+    --color-bg: #15140f;
+    --color-surface: #1e1c17;
+    --color-ink: #efece5;
+    --color-muted: #a49e93;
+    --color-line: #3a362e;
+    --color-accent: #e0808f;
+    --color-on-accent: #15140f;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* Paints the overscroll gutter. `:has()` lets a nested persona wrapper
+       set it, which a nested layout could not do by itself. */
+    background-color: var(--color-bg);
   }
-} */
-.swiper-slide{
-  width: auto;
-  flex-shrink: 0;
-  display: block;
-  height: 100%;
-  max-height: 100%;
- }
 
- .parallax {
-  /* The image used */
-  background-image: url("/images/personal/ibra2.jpg");
-
-  /* Set a specific height */
-  min-height: 100px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-:root {
-  --swiper-navigation-color: #000; 
-}
-
-/* Tailwind CSS utility classes for responsive design */
-footer {
-  @apply w-full md:w-4/5 lg:w-3/5 mx-auto;
-}
-
-.bg-gray-100 {
-  @apply rounded-sm p-4 md:p-14 my-4;
-}
-
-.text-6xl {
-  @apply text-3xl md:text-5xl;
-}
-
-.input, .textarea {
-  @apply py-1 px-2 w-full my-2;
-}
-
-/* This can be in your main CSS file if you're using PostCSS with Tailwind */
-
-
-/* Responsive grid adjustments */
-@media (max-width: 768px) {
-  .grid {
-      grid-template-columns: 1fr;  /* Stacks the columns on smaller screens */
+  html:has([data-persona='model']) {
+    background-color: #f3f2ef;
   }
-  .px-32 {
-      padding-left: 1rem; /* Reduce padding on smaller screens */
-      padding-right: 1rem;
+
+  @media (prefers-color-scheme: dark) {
+    html:has([data-persona='model']) {
+      background-color: #15140f;
+    }
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* One visible focus treatment for the whole site, in both palettes. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-/* Text scaling */
-h1 {
-  font-size: 2.5rem; /* Default size */
+/* Landing hero: hovering the developer or model option grows its column and
+   shrinks the other, like a slider. The two grids (colour backdrop + text
+   content) share the split via CSS variables set on their common ancestor,
+   since :has() can't reach across siblings on its own. */
+.hero-frame {
+  --hero-dev: 7fr;
+  --hero-model: 5fr;
 }
 
-@media (max-width: 768px) {
-  h1 {
-      font-size: 1.5rem; /* Smaller font size for small devices */
+.hero-frame:has(.hero-link-dev:hover, .hero-link-dev:focus-visible) {
+  --hero-dev: 7.8fr;
+  --hero-model: 4.2fr;
+}
+
+.hero-frame:has(.hero-link-model:hover, .hero-link-model:focus-visible) {
+  --hero-dev: 4.2fr;
+  --hero-model: 7.8fr;
+}
+
+.hero-grid {
+  transition: grid-template-columns 500ms var(--ease-out-soft);
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: var(--hero-dev) var(--hero-model);
   }
 }
 
-/* Parallax responsive adjustments */
-@media (max-width: 768px) {
-  .parallax {
-      background-attachment: scroll;
-      min-height: 500px /* Disable fixed attachment on small devices for better performance and compatibility */
+/* Portrait crossfade: developer photo shows by default (and while the
+   developer option is hovered); hovering the model option swaps it in. */
+.hero-portrait-dev {
+  opacity: 1;
+}
+
+.hero-portrait-model {
+  opacity: 0;
+}
+
+.hero-frame:has(.hero-link-model:hover, .hero-link-model:focus-visible) .hero-portrait-dev {
+  opacity: 0;
+}
+
+.hero-frame:has(.hero-link-model:hover, .hero-link-model:focus-visible) .hero-portrait-model {
+  opacity: 1;
+}
+
+@utility skip-link {
+  position: absolute;
+  left: var(--spacing-gutter);
+  top: -4rem;
+  z-index: 100;
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: top 150ms var(--ease-out-soft);
+
+  &:focus {
+    top: var(--spacing-gutter);
+  }
+}
+
+/* Selected-work marquee: an auto-scrolling strip of brand logos. The track
+   renders the item list twice back to back and slides exactly one copy's
+   width, so the loop is seamless; hovering pauses it for a closer look. */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
