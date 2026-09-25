@@ -215,9 +215,9 @@
   animation: hero-glitch 6s steps(1) infinite;
 }
 
-/* Motion-blur tail on the hero portrait: two ghost copies of the same image,
-   offset further and blurred more than the last, fading out behind it. Synced
-   to the same 6s cycle as .hero-glitch so the flicker reads as a fast swoosh. */
+/* Motion-blur tail on the hero portrait: two static ghost copies of the same
+   image, offset further and blurred more than the last, fading out behind
+   it. Always on from first paint — no animation, no flicker. */
 .hero-portrait {
   position: relative;
 }
@@ -232,58 +232,19 @@
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  opacity: 0;
   pointer-events: none;
 }
 
 .hero-portrait::before {
-  animation: hero-trail-near 6s steps(1) infinite;
+  opacity: 0.35;
+  filter: blur(8px);
+  transform: translateX(-3rem);
 }
 
 .hero-portrait::after {
-  animation: hero-trail-far 6s steps(1) infinite;
-}
-
-@keyframes hero-trail-near {
-  0%,
-  92.5%,
-  97%,
-  100% {
-    opacity: 0;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-  93.5% {
-    opacity: 0.5;
-    filter: blur(8px);
-    transform: translateX(-3rem);
-  }
-  95.5% {
-    opacity: 0.15;
-    filter: blur(12px);
-    transform: translateX(-5rem);
-  }
-}
-
-@keyframes hero-trail-far {
-  0%,
-  92.5%,
-  97.5%,
-  100% {
-    opacity: 0;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-  94% {
-    opacity: 0.3;
-    filter: blur(16px);
-    transform: translateX(-6.5rem);
-  }
-  96.5% {
-    opacity: 0;
-    filter: blur(22px);
-    transform: translateX(-9.5rem);
-  }
+  opacity: 0.18;
+  filter: blur(16px);
+  transform: translateX(-6rem);
 }
 
 /* Landing hero: hovering the developer or model option grows its column and
