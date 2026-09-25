@@ -37,7 +37,7 @@ export function ProgrammerHero() {
       </div>
 
       {/* Contained portrait, flush against the section's bottom edge, with a periodic glitch flicker. */}
-      <div className="hero-glitch order-1 relative h-[30.72rem] w-[28.16rem] max-w-full shrink-0 self-end sm:order-none sm:h-[43.2rem] sm:w-xl lg:h-[57.6rem] lg:w-[46.8rem]">
+      <div className="hero-glitch hero-portrait order-1 relative h-[30.72rem] w-[28.16rem] max-w-full shrink-0 self-end sm:order-none sm:h-[43.2rem] sm:w-xl lg:h-[57.6rem] lg:w-[46.8rem]">
         <Image
           src="/images/personal/maulana-programmer.png"
           alt={t('metaTitle')}
