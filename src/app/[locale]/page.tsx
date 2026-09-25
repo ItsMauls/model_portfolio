@@ -1,17 +1,23 @@
-import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
-import { LocaleHint } from '@/components/shared/LocaleHint'
-import { LocaleSwitch } from '@/components/shared/LocaleSwitch'
+import { DeveloperHero } from '@/components/landing/DeveloperHero'
+import { LandingHeader } from '@/components/landing/LandingHeader'
+import { ModelHero } from '@/components/landing/ModelHero'
+import { PortraitCutout } from '@/components/landing/PortraitCutout'
+import { SplitBackdrop } from '@/components/landing/SplitBackdrop'
 
 export default function LandingPage() {
-  const t = useTranslations('landing')
   return (
-    <main data-persona="programmer" className="min-h-dvh p-(--spacing-gutter)">
-      <LocaleSwitch />
-      <h1 className="font-mono text-2xl">{t('chooseAPath')}</h1>
-      <Link href="/programmer">{t('programmer.word')}</Link>
-      <Link href="/model">{t('model.word')}</Link>
-      <LocaleHint />
+    <main className="flex min-h-dvh items-center justify-center bg-[#0b0a0e] text-white">
+      <div className="hero-frame relative flex h-dvh min-h-[700px] w-full flex-col overflow-hidden border border-white/10">
+        <SplitBackdrop />
+        <LandingHeader />
+
+        <div className="hero-grid relative z-20 grid flex-1 grid-cols-1 items-stretch px-7 sm:px-10 lg:px-12">
+          <DeveloperHero />
+          <ModelHero />
+        </div>
+
+        <PortraitCutout />
+      </div>
     </main>
   )
 }

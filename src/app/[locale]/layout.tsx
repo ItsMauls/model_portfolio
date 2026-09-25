@@ -1,6 +1,6 @@
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
-import { Bodoni_Moda, JetBrains_Mono, Manrope } from 'next/font/google'
+import { Antonio, Bodoni_Moda, JetBrains_Mono, Manrope } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { routing } from '@/i18n/routing'
@@ -23,6 +23,13 @@ const bodoni = Bodoni_Moda({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   variable: '--font-bodoni',
+  display: 'swap',
+})
+
+const antonio = Antonio({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-antonio',
   display: 'swap',
 })
 
@@ -57,7 +64,10 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound()
 
   return (
-    <html lang={locale} className={`${manrope.variable} ${jetbrainsMono.variable} ${bodoni.variable}`}>
+    <html
+      lang={locale}
+      className={`${manrope.variable} ${jetbrainsMono.variable} ${bodoni.variable} ${antonio.variable}`}
+    >
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

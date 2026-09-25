@@ -10,6 +10,13 @@ next-env.d.ts
 .env
 .env*.local
 
+# Local SQLite dev database.
+prisma/*.db
+prisma/*.db-journal
+
+# Admin uploads when BLOB_READ_WRITE_TOKEN isn't set.
+public/uploads
+
 .vercel
 .DS_Store
 npm-debug.log*

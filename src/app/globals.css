@@ -14,6 +14,7 @@
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
   --font-display: var(--font-bodoni), ui-serif, Georgia, serif;
+  --font-condensed: var(--font-antonio), ui-sans-serif, sans-serif;
 
   /* Shared spacing scale. Tailwind's default 4px step, plus the page rhythm. */
   --spacing-section: 6rem;
@@ -134,6 +135,53 @@
   }
 }
 
+/* Landing hero: hovering the developer or model option grows its column and
+   shrinks the other, like a slider. The two grids (colour backdrop + text
+   content) share the split via CSS variables set on their common ancestor,
+   since :has() can't reach across siblings on its own. */
+.hero-frame {
+  --hero-dev: 7fr;
+  --hero-model: 5fr;
+}
+
+.hero-frame:has(.hero-link-dev:hover, .hero-link-dev:focus-visible) {
+  --hero-dev: 7.8fr;
+  --hero-model: 4.2fr;
+}
+
+.hero-frame:has(.hero-link-model:hover, .hero-link-model:focus-visible) {
+  --hero-dev: 4.2fr;
+  --hero-model: 7.8fr;
+}
+
+.hero-grid {
+  transition: grid-template-columns 500ms var(--ease-out-soft);
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: var(--hero-dev) var(--hero-model);
+  }
+}
+
+/* Portrait crossfade: developer photo shows by default (and while the
+   developer option is hovered); hovering the model option swaps it in. */
+.hero-portrait-dev {
+  opacity: 1;
+}
+
+.hero-portrait-model {
+  opacity: 0;
+}
+
+.hero-frame:has(.hero-link-model:hover, .hero-link-model:focus-visible) .hero-portrait-dev {
+  opacity: 0;
+}
+
+.hero-frame:has(.hero-link-model:hover, .hero-link-model:focus-visible) .hero-portrait-model {
+  opacity: 1;
+}
+
 @utility skip-link {
   position: absolute;
   left: var(--spacing-gutter);
@@ -147,5 +195,31 @@
 
   &:focus {
     top: var(--spacing-gutter);
+  }
+}
+
+/* Selected-work marquee: an auto-scrolling strip of brand logos. The track
+   renders the item list twice back to back and slides exactly one copy's
+   width, so the loop is seamless; hovering pauses it for a closer look. */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }

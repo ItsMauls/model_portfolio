@@ -24,16 +24,15 @@
   "landing": {
     "metaTitle": "Maulana Ibrahim Adiputra",
     "metaDescription": "Software Developer and freelance model based in Jakarta. Two portfolios, one person.",
-    "chooseAPath": "Choose a path",
-    "programmer": {
-      "word": "Programmer",
-      "tagline": "Full-stack developer building fintech, e-commerce, and SaaS products.",
-      "cta": "View developer work"
+    "availableFor": "Available for freelance projects",
+    "developer": {
+      "line1": "Software",
+      "line2": "Developer",
+      "tagline": "Designs that inspire. Systems that scale.",
+      "cta": "View work"
     },
     "model": {
-      "word": "Model",
-      "tagline": "Freelance model for campaigns, editorial, and brand collaborations.",
-      "cta": "View model portfolio"
+      "headline": "Freelance Model"
     }
   },
   "programmer": {
@@ -90,22 +89,35 @@
   "model": {
     "metaTitle": "Maulana Ibrahim Adiputra - Model",
     "metaDescription": "Freelance model based in Jakarta. Campaign, editorial, and commercial work for brands and agencies.",
+    "nav": {
+      "work": "Work",
+      "photo": "Photo",
+      "sayHello": "Say hello"
+    },
     "hero": {
+      "name": "Maulana Ibrahim Adiputra",
+      "role": "Freelance Model",
       "label": "Selected work",
       "carousel": "Featured campaigns",
       "slideOf": "Slide {current} of {total}",
       "empty": "Campaign work is being added."
     },
     "brands": {
-      "title": "Brands",
+      "title": "Selected Work",
       "empty": "Brand collaborations are being added.",
       "viewCampaign": "View the {brand} campaign"
     },
     "gallery": {
-      "title": "Gallery",
+      "title": "Photo",
       "hint": "Drag to browse",
       "empty": "Photographs are being added.",
       "openPhoto": "Open photograph {index}"
+    },
+    "contact": {
+      "title": "Say hello",
+      "subtitle": "Open for bookings, editorial, and campaign work.",
+      "booking": "Bookings",
+      "instagram": "Instagram"
     },
     "profile": {
       "title": "Profile",
